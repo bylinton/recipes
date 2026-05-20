@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microwave Protein Pancake Bowl — by.linton</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #F5F5F2;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      max-width: 520px;
+      width: 100%;
+      border: 0.5px solid #e0e0d8;
+    }
+    .header {
+      background: #EAF3DE;
+      padding: 1.5rem 1.5rem 1.25rem;
+    }
+    .header-meta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: #3B6D11;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .header-title {
+      font-size: 22px;
+      font-weight: 500;
+      color: #173404;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+    .header-tags {
+      font-size: 13px;
+      color: #3B6D11;
+    }
+    .macro-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 0.5px solid #e0e0d8;
+    }
+    .macro-item {
+      padding: 14px 0;
+      text-align: center;
+      border-right: 0.5px solid #e0e0d8;
+    }
+    .macro-item:last-child { border-right: none; }
+    .macro-label {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 2px;
+    }
+    .macro-value {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+    .macro-value.protein { color: #3B6D11; }
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 0.5px solid #e0e0d8;
+    }
+    .ingredient-col {
+      padding: 1.25rem 1.5rem;
+    }
+    .ingredient-col:first-child {
+      border-right: 0.5px solid #e0e0d8;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .ingredient-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .ingredient-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .ingredient-name { color: #1a1a1a; }
+    .ingredient-qty { color: #888; }
+    .method-section {
+      padding: 1.25rem 1.5rem;
+    }
+    .step-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .step-item {
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .step-number {
+      min-width: 20px;
+      height: 20px;
+      background: #EAF3DE;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 500;
+      color: #3B6D11;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text { color: #1a1a1a; }
+    .footer {
+      padding: 10px 1.5rem;
+      background: #F9F9F7;
+      border-top: 0.5px solid #e0e0d8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-note {
+      font-size: 11px;
+      color: #aaa;
+    }
+    .footer-brand {
+      font-size: 11px;
+      font-weight: 500;
+      color: #3B6D11;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <p class="header-meta">Breakfast · 5 min · Serves 1</p>
+      <h1 class="header-title">Microwave protein pancake bowl</h1>
+      <p class="header-tags">High protein · Gluten free · Dairy free</p>
+    </div>
+
+    <div class="macro-bar">
+      <div class="macro-item">
+        <p class="macro-label">calories</p>
+        <p class="macro-value">455</p>
+      </div>
+      <div class="macro-item">
+        <p class="macro-label">protein</p>
+        <p class="macro-value protein">39g</p>
+      </div>
+      <div class="macro-item">
+        <p class="macro-label">carbs</p>
+        <p class="macro-value">47g</p>
+      </div>
+      <div class="macro-item">
+        <p class="macro-label">fat</p>
+        <p class="macro-value">12g</p>
+      </div>
+    </div>
+
+    <div class="ingredients-grid">
+      <div class="ingredient-col">
+        <p class="section-label">Batter</p>
+        <ul class="ingredient-list">
+          <li class="ingredient-item">
+            <span class="ingredient-name">Eggs</span>
+            <span class="ingredient-qty">2</span>
+          </li>
+          <li class="ingredient-item">
+            <span class="ingredient-name">Banana</span>
+            <span class="ingredient-qty">½</span>
+          </li>
+          <li class="ingredient-item">
+            <span class="ingredient-name">Protein powder</span>
+            <span class="ingredient-qty">1 scoop</span>
+          </li>
+          <li class="ingredient-item">
+            <span class="ingredient-name">Cassava flour</span>
+            <span class="ingredient-qty">1 tbsp</span>
+          </li>
+        </ul>
+      </div>
+      <div class="ingredient-col">
+        <p class="section-label">Toppings</p>
+        <ul class="ingredient-list">
+          <li class="ingredient-item">
+            <span class="ingredient-name">Greek yogurt</span>
+            <span class="ingredient-qty">2 tbsp</span>
+          </li>
+          <li class="ingredient-item">
+            <span class="ingredient-name">Papaya</span>
+            <span class="ingredient-qty">½ cup</span>
+          </li>
+          <li class="ingredient-item">
+            <span class="ingredient-name">Blueberries</span>
+            <span class="ingredient-qty">¼ cup</span>
+          </li>
+          <li class="ingredient-item">
+            <span class="ingredient-name">Maple syrup</span>
+            <span class="ingredient-qty">1 tbsp</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="method-section">
+      <p class="section-label">Method</p>
+      <ol class="step-list">
+        <li class="step-item">
+          <span class="step-number">1</span>
+          <span class="step-text">Blend all batter ingredients until fluffy.</span>
+        </li>
+        <li class="step-item">
+          <span class="step-number">2</span>
+          <span class="step-text">Pour into a microwave-safe bowl.</span>
+        </li>
+        <li class="step-item">
+          <span class="step-number">3</span>
+          <span class="step-text">Microwave for 3 minutes or until cooked through.</span>
+        </li>
+        <li class="step-item">
+          <span class="step-number">4</span>
+          <span class="step-text">Top with Greek yogurt, papaya, blueberries and a drizzle of maple syrup.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="footer">
+      <p class="footer-note">Macros are estimates. Protein powder brand may vary.</p>
+      <p class="footer-brand">by.linton</p>
+    </div>
+  </div>
+</body>
+</html>
